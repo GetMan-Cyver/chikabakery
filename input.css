@@ -1,0 +1,21 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import "tailwindcss";
+
+@theme {
+  --color-bakery-50: #fdfbf7;
+  --color-bakery-100: #f7f2ea;
+  --color-bakery-200: #ebddc9;
+  --color-bakery-300: #dcbf98;
+  --color-bakery-400: #cda268;
+  --color-bakery-500: #b8823b;
+  --color-bakery-600: #9b6425;
+  --color-bakery-700: #7a4b1a;
+  --color-bakery-800: #543110;
+  --color-bakery-900: #341d09;
+
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+}

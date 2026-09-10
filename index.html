@@ -1,0 +1,1143 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Progressive Web App Meta -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#7A4B1A" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="LevainBakery" />
+    <link
+      rel="apple-touch-icon"
+      href="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=192&h=192&q=80"
+    />
+    <title>Chikawa | Bakery & Patisserie</title>
+
+    <!-- Tailwind CSS Framework CDN -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bakery: {
+                50: "#FDFBF7",
+                100: "#F7F2EA",
+                200: "#EBDDC9",
+                300: "#DCBF98",
+                400: "#CDA268",
+                500: "#B8823B",
+                600: "#9B6425",
+                700: "#7A4B1A",
+                800: "#543110",
+                900: "#341D09",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              serif: ["Playfair Display", "serif"],
+            },
+          },
+        },
+      };
+    </script> -->
+    <!-- Tailwind CSS Stand alone -->
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="tailwind.js"></script>
+
+    <!-- Typography Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Lucide Vector Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- External Custom Vanilla Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="grain-bg text-stone-800 antialiased min-h-screen flex flex-col font-sans selection:bg-bakery-200 selection:text-bakery-900"
+  >
+    <!-- Header Navigation Bar -->
+    <nav
+      class="sticky top-0 z-40 w-full glass-card border-b border-bakery-200/70 transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-3">
+          <div
+            class="w-11 h-11 rounded-full bg-bakery-700 flex items-center justify-center text-bakery-50 shadow-md"
+          >
+            <i data-lucide="croissant" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <span
+              class="font-serif text-2xl font-bold tracking-tight text-bakery-900 block leading-tight"
+              >Le Petit Levain</span
+            >
+            <span
+              class="text-xs tracking-widest uppercase text-bakery-600 font-semibold"
+              >Artisan Bakery & Patisserie</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="hidden md:flex items-center space-x-8 text-sm font-medium text-stone-700"
+        >
+          <a href="#hero" class="hover:text-bakery-700 transition">Beranda</a>
+          <a href="#katalog" class="hover:text-bakery-700 transition"
+            >Katalog Produk</a
+          >
+          <a href="#keamanan" class="hover:text-bakery-700 transition"
+            >Keamanan Berbelanja</a
+          >
+          <a href="#tentang" class="hover:text-bakery-700 transition"
+            >Tentang Kami</a
+          >
+        </div>
+
+        <div class="flex items-center space-x-3">
+          <button
+            id="btnOpenAdmin"
+            class="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold rounded-full border border-bakery-300 bg-bakery-50 hover:bg-bakery-100 text-bakery-800 transition shadow-sm"
+          >
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+            <span>Admin Portal</span>
+          </button>
+          <a
+            href="#katalog"
+            class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-bakery-700 hover:bg-bakery-800 text-white font-medium text-xs tracking-wide transition shadow-lg shadow-bakery-700/20"
+          >
+            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            <span>Pesan Langsung</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Banner Section -->
+    <header
+      id="hero"
+      class="relative overflow-hidden pt-12 pb-16 lg:py-24 border-b border-bakery-200/50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6 text-left">
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-bakery-100 text-bakery-800 text-xs font-medium border border-bakery-300"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+              ></span>
+              <span
+                >Dipanggang Segar Setiap Hari • Fermentasi Alami 36 Jam</span
+              >
+            </div>
+            <h1
+              class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-bakery-900 tracking-tight leading-[1.15]"
+            >
+              Roti Artisan Otentik & Pastry Renyah Langsung ke Meja Anda.
+            </h1>
+            <p
+              class="text-base sm:text-lg text-stone-600 max-w-2xl leading-relaxed"
+            >
+              Pesan mudah tanpa registrasi akun. Pilih varian roti favorit Anda,
+              kirim ke WhatsApp toko kami dalam 1-klik dengan konfirmasi pesanan
+              otomatis dan aman.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <a
+                href="#katalog"
+                class="inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-bakery-700 hover:bg-bakery-800 text-white font-semibold text-sm transition shadow-xl shadow-bakery-700/25"
+              >
+                <i data-lucide="utensils" class="w-4 h-4"></i>
+                <span>Jelajahi Menu Hari Ini</span>
+              </a>
+              <a
+                href="#keamanan"
+                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-stone-50 text-stone-700 font-medium text-sm border border-stone-300 transition"
+              >
+                <i data-lucide="shield" class="w-4 h-4 text-bakery-600"></i>
+                <span>Proteksi Keamanan</span>
+              </a>
+            </div>
+
+            <!-- Live Sales Counters -->
+            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-bakery-200">
+              <div>
+                <p
+                  class="text-2xl sm:text-3xl font-bold font-serif text-bakery-800"
+                  id="totalSoldCounter"
+                >
+                  0+
+                </p>
+                <p
+                  class="text-xs text-stone-500 uppercase tracking-wider font-semibold"
+                >
+                  Produk Terjual
+                </p>
+              </div>
+              <div>
+                <p
+                  class="text-2xl sm:text-3xl font-bold font-serif text-bakery-800"
+                >
+                  4.9/5.0
+                </p>
+                <p
+                  class="text-xs text-stone-500 uppercase tracking-wider font-semibold"
+                >
+                  Ulasan Pelanggan
+                </p>
+              </div>
+              <div>
+                <p
+                  class="text-2xl sm:text-3xl font-bold font-serif text-bakery-800"
+                >
+                  100%
+                </p>
+                <p
+                  class="text-xs text-stone-500 uppercase tracking-wider font-semibold"
+                >
+                  Bahan Alami Halal
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              <div
+                class="absolute -top-4 -left-4 w-72 h-72 bg-bakery-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"
+              ></div>
+              <div
+                class="absolute -bottom-4 -right-4 w-72 h-72 bg-amber-200 rounded-full mix-blend-multiply filter blur-3xl opacity-70"
+              ></div>
+              <div
+                class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-4/5 bg-stone-100 group"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1000&q=80"
+                  alt="Artisan Sourdough Bakery"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  onerror="
+                    this.src =
+                      'https://placehold.co/800x1000/B8823B/FFFFFF?text=Artisan+Bakery'
+                  "
+                />
+                <div
+                  class="absolute bottom-4 left-4 right-4 glass-card p-4 rounded-2xl border border-white/60 shadow-lg"
+                >
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h4 class="font-serif font-bold text-bakery-900 text-sm">
+                        Wild Sourdough Boule
+                      </h4>
+                      <p class="text-xs text-stone-500">
+                        Rp 65.000 • Fermentasi 48 Jam
+                      </p>
+                    </div>
+                    <span
+                      class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 text-[11px] font-bold"
+                      >Terlaris</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Dynamic Products Section -->
+    <main class="grow py-12">
+      <section id="katalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4"
+        >
+          <div>
+            <span
+              class="text-xs uppercase font-bold tracking-widest text-bakery-600"
+              >Pilihan Roti & Pastry Hari Ini</span
+            >
+            <h2
+              class="font-serif text-3xl sm:text-4xl font-bold text-bakery-900 mt-1"
+            >
+              Katalog Produk Dinamis
+            </h2>
+            <p class="text-sm text-stone-500 mt-1">
+              Data produk di bawah terhubung langsung dan siap dipesan via
+              WhatsApp.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-2" id="categoryFilterContainer"></div>
+        </div>
+
+        <!-- Dynamic Product Grid -->
+        <div
+          id="productGrid"
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        ></div>
+
+        <!-- Empty Catalog State -->
+        <div
+          id="emptyCatalogState"
+          class="hidden text-center py-16 bg-white rounded-3xl border border-bakery-200"
+        >
+          <i
+            data-lucide="package-open"
+            class="w-12 h-12 text-stone-400 mx-auto mb-3"
+          ></i>
+          <h3 class="text-lg font-bold text-stone-700 font-serif">
+            Belum Ada Produk Ditampilkan
+          </h3>
+          <p class="text-sm text-stone-500 mt-1">
+            Silakan tambahkan produk baru melalui Admin Dashboard.
+          </p>
+        </div>
+      </section>
+
+      <!-- Cybersecurity Guarantee Section -->
+      <section
+        id="keamanan"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20"
+      >
+        <div
+          class="bg-linear-to-br from-stone-900 via-bakery-900 to-stone-950 rounded-3xl p-8 sm:p-12 text-stone-100 relative overflow-hidden shadow-2xl"
+        >
+          <div
+            class="absolute -right-10 -bottom-10 w-96 h-96 bg-bakery-600/20 rounded-full blur-3xl pointer-events-none"
+          ></div>
+          <div class="relative z-10 max-w-3xl">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold border border-emerald-500/30 mb-4"
+            >
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+              <span>Keamanan Terjamin Multi-Layer Cyber Security</span>
+            </div>
+            <h2
+              class="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight"
+            >
+              Aman Dari Scam, Malware, Virus & Eksploitasi
+            </h2>
+            <p class="text-stone-300 text-sm sm:text-base mt-3 leading-relaxed">
+              Arsitektur aplikasi ini dirancang tahan terhadap kejahatan siber
+              modern:
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4 mt-8">
+              <div
+                class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-bakery-400/40 transition"
+              >
+                <div class="flex items-center gap-3 mb-2">
+                  <div
+                    class="p-2 rounded-lg bg-emerald-500/20 text-emerald-400"
+                  >
+                    <i data-lucide="lock" class="w-4 h-4"></i>
+                  </div>
+                  <h4 class="font-semibold text-sm text-white">
+                    Bebas Login & Data Pribadi
+                  </h4>
+                </div>
+                <p class="text-xs text-stone-400">
+                  Pembeli tidak perlu memasukkan sandi atau informasi rahasia.
+                  Pesanan diproses langsung lewat WhatsApp.
+                </p>
+              </div>
+
+              <div
+                class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-bakery-400/40 transition"
+              >
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="p-2 rounded-lg bg-sky-500/20 text-sky-400">
+                    <i data-lucide="code-xml" class="w-4 h-4"></i>
+                  </div>
+                  <h4 class="font-semibold text-sm text-white">
+                    Proteksi Anti-XSS & Anti-Malware
+                  </h4>
+                </div>
+                <p class="text-xs text-stone-400">
+                  Setiap input disanitasi ketat dan hanya URL media dengan
+                  protokol resmi HTTPS yang diizinkan.
+                </p>
+              </div>
+
+              <div
+                class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-bakery-400/40 transition"
+              >
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="p-2 rounded-lg bg-amber-500/20 text-amber-400">
+                    <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                  </div>
+                  <h4 class="font-semibold text-sm text-white">
+                    Anti-Brute Force Admin Lockout
+                  </h4>
+                </div>
+                <p class="text-xs text-stone-400">
+                  Akses administrator dilindungi timer pembekuan otomatis
+                  (lockout) bila terjadi 5 kali kesalahan login.
+                </p>
+              </div>
+
+              <div
+                class="p-4 rounded-2xl bg-white/5 border border-white/10 hover:border-bakery-400/40 transition"
+              >
+                <div class="flex items-center gap-3 mb-2">
+                  <div class="p-2 rounded-lg bg-purple-500/20 text-purple-400">
+                    <i data-lucide="server" class="w-4 h-4"></i>
+                  </div>
+                  <h4 class="font-semibold text-sm text-white">
+                    Bebas SQL Injection & Backdoor
+                  </h4>
+                </div>
+                <p class="text-xs text-stone-400">
+                  Backend Google Sheets Apps Script berjalan di lingkungan
+                  Google Cloud terisolasi tanpa port SQL terbuka.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Showcase Section -->
+      <section
+        id="tentang"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 mb-12"
+      >
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div
+            class="p-6 rounded-2xl bg-white border border-bakery-200/80 shadow-sm"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-bakery-100 text-bakery-800 flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-bakery-900">
+              Ragi Alami 100%
+            </h3>
+            <p class="text-xs text-stone-600 mt-2">
+              Dibuat menggunakan indukan ragi alami (*wild levain*) yang
+              menyehatkan pencernaan dan memberikan cita rasa gurih otentik.
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-2xl bg-white border border-bakery-200/80 shadow-sm"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-bakery-100 text-bakery-800 flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="flame" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-bakery-900">
+              Stone Oven Baked
+            </h3>
+            <p class="text-xs text-stone-600 mt-2">
+              Dipanggang pada suhu presisi di atas lempengan batu agar
+              menghasilkan kerak renyah dan rongga dalam lembut.
+            </p>
+          </div>
+          <div
+            class="p-6 rounded-2xl bg-white border border-bakery-200/80 shadow-sm"
+          >
+            <div
+              class="w-12 h-12 rounded-xl bg-bakery-100 text-bakery-800 flex items-center justify-center mx-auto mb-4"
+            >
+              <i data-lucide="truck" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-serif font-bold text-lg text-bakery-900">
+              Pengiriman Instan & Fresh
+            </h3>
+            <p class="text-xs text-stone-600 mt-2">
+              Dipersiapkan di hari yang sama langsung dari oven pagi kami ke
+              kurir instan/same day kota Anda.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800 text-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between gap-6"
+        >
+          <div class="flex items-center space-x-3">
+            <div
+              class="w-9 h-9 rounded-full bg-bakery-600 flex items-center justify-center text-white"
+            >
+              <i data-lucide="croissant" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <span class="font-serif font-bold text-white text-base"
+                >Le Petit Levain</span
+              >
+              <p class="text-xs text-stone-500">
+                Boulangerie & Patisserie Tradisi Prancis
+              </p>
+            </div>
+          </div>
+          <p class="text-xs text-stone-500 text-center sm:text-right">
+            &copy; 2026 Le Petit Levain. Transaksi aman dengan enkripsi WhatsApp
+            Direct.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Checkout Modal -->
+    <div
+      id="checkoutModal"
+      class="fixed inset-0 z-50 items-center justify-center bg-black/60 backdrop-blur-sm hidden p-4 transition-all"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-bakery-200 relative max-h-[90vh] overflow-y-auto"
+      >
+        <button
+          id="btnCloseCheckoutModal"
+          class="absolute top-5 right-5 text-stone-400 hover:text-stone-700 transition"
+        >
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+
+        <div class="flex items-center gap-3 mb-4">
+          <div class="p-2.5 rounded-2xl bg-emerald-50 text-emerald-600">
+            <i data-lucide="message-circle" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h3 class="font-serif text-xl font-bold text-stone-900">
+              Beli Cepat via WhatsApp
+            </h3>
+            <p class="text-xs text-stone-500">
+              Tanpa repot buat akun. Pesanan langsung dikirim ke WhatsApp toko.
+            </p>
+          </div>
+        </div>
+
+        <div
+          id="checkoutProductPreview"
+          class="p-4 rounded-2xl bg-bakery-50 border border-bakery-200 mb-5 flex gap-4 items-center"
+        ></div>
+
+        <form id="orderForm" class="space-y-4">
+          <input type="hidden" id="orderProductId" />
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1"
+                >Jumlah (Qty)</label
+              >
+              <div
+                class="flex items-center border border-stone-300 rounded-xl overflow-hidden bg-white"
+              >
+                <button
+                  type="button"
+                  id="btnQtyMinus"
+                  class="px-3 py-2 text-stone-600 hover:bg-stone-100"
+                >
+                  -
+                </button>
+                <input
+                  type="number"
+                  id="orderQty"
+                  min="1"
+                  max="50"
+                  value="1"
+                  class="w-full text-center py-2 text-sm font-bold text-stone-800 border-none focus:outline-none"
+                  readonly
+                />
+                <button
+                  type="button"
+                  id="btnQtyPlus"
+                  class="px-3 py-2 text-stone-600 hover:bg-stone-100"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1"
+                >Total Estimasi</label
+              >
+              <div
+                class="px-3 py-2 rounded-xl bg-stone-100 text-stone-900 text-sm font-bold border border-stone-200 flex items-center h-9.5"
+                id="checkoutTotalPrice"
+              >
+                Rp 0
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1"
+              >Nama Pemesan <span class="text-rose-500">*</span></label
+            >
+            <input
+              type="text"
+              id="orderBuyerName"
+              required
+              placeholder="Contoh: Rina Melati"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:ring-2 focus:ring-bakery-500 focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1"
+              >Nomor WhatsApp Pembeli
+              <span class="text-rose-500">*</span></label
+            >
+            <input
+              type="tel"
+              id="orderBuyerPhone"
+              required
+              placeholder="Contoh: 081234567890"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:ring-2 focus:ring-bakery-500 focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1"
+              >Metode Pengambilan</label
+            >
+            <select
+              id="orderDeliveryMethod"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:ring-2 focus:ring-bakery-500 focus:outline-none bg-white"
+            >
+              <option value="Delivery (Kurir Instan / Sameday)">
+                Delivery (Kurir Instan / Sameday)
+              </option>
+              <option value="Pick-up di Outlet (Ambil Sendiri)">
+                Pick-up di Outlet (Ambil Sendiri)
+              </option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1"
+              >Alamat Pengiriman & Catatan</label
+            >
+            <textarea
+              id="orderAddress"
+              rows="2"
+              placeholder="Tuliskan alamat lengkap atau catatan roti (misal: potong slice tebal)"
+              class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 text-sm focus:ring-2 focus:ring-bakery-500 focus:outline-none"
+            ></textarea>
+          </div>
+
+          <div class="pt-2">
+            <button
+              type="submit"
+              id="btnSubmitOrder"
+              class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm transition shadow-lg shadow-emerald-600/30 flex items-center justify-center gap-2"
+            >
+              <i data-lucide="send" class="w-4 h-4"></i>
+              <span>Kirim Pesanan ke WhatsApp Toko</span>
+            </button>
+            <!-- Popup blocker fallback -->
+            <div
+              id="waFallbackContainer"
+              class="hidden mt-3 p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2"
+            >
+              <p class="text-xs text-emerald-800 font-medium">
+                WhatsApp tidak terbuka otomatis? Klik tombol di bawah:
+              </p>
+              <a
+                id="btnDirectWaFallback"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white text-xs font-bold hover:bg-emerald-700 transition"
+              >
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                <span>Buka WhatsApp Sekarang</span>
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Media Player Modal -->
+    <div
+      id="mediaModal"
+      class="fixed inset-0 z-50 items-center justify-center bg-black/85 backdrop-blur-md hidden p-4"
+    >
+      <div
+        class="relative max-w-3xl w-full bg-stone-900 rounded-3xl overflow-hidden shadow-2xl border border-stone-800"
+      >
+        <button
+          id="btnCloseMediaModal"
+          class="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/60 text-white hover:bg-black/90 transition"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+        <div
+          id="mediaModalContent"
+          class="w-full flex items-center justify-center bg-black min-h-75"
+        ></div>
+        <div
+          class="p-5 text-white bg-stone-950/90 flex justify-between items-center"
+        >
+          <div>
+            <h4 id="mediaModalTitle" class="font-serif font-bold text-base">
+              Judul Media
+            </h4>
+            <p id="mediaModalDesc" class="text-xs text-stone-400">
+              Deskripsi singkat
+            </p>
+          </div>
+          <span
+            class="text-xs px-2.5 py-1 rounded bg-stone-800 text-stone-300 font-mono"
+            id="mediaModalType"
+            >Preview</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin Dashboard Modal -->
+    <div
+      id="adminModal"
+      class="fixed inset-0 z-50 items-center justify-center bg-black/70 backdrop-blur-sm hidden p-4"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-8 shadow-2xl border border-stone-200 relative max-h-[92vh] flex flex-col"
+      >
+        <div
+          class="flex items-center justify-between pb-4 border-b border-stone-200"
+        >
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-2xl bg-bakery-800 text-white">
+              <i data-lucide="settings" class="w-6 h-6"></i>
+            </div>
+            <div>
+              <h3 class="font-serif text-xl font-bold text-stone-900">
+                Dashboard Manajemen Produk (CRUD)
+              </h3>
+              <p class="text-xs text-stone-500">
+                Kelola teks, harga, multimedia & sinkronisasi Google Sheets Apps
+                Script
+              </p>
+            </div>
+          </div>
+          <button
+            id="btnCloseAdminModal"
+            class="text-stone-400 hover:text-stone-700 transition"
+          >
+            <i data-lucide="x" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+        <!-- Admin Authentication Gate -->
+        <div
+          id="adminAuthSection"
+          class="py-12 max-w-md mx-auto w-full text-center space-y-4"
+        >
+          <div
+            class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mx-auto text-amber-700 border border-amber-200"
+          >
+            <i data-lucide="lock" class="w-7 h-7"></i>
+          </div>
+          <h4 class="font-serif text-lg font-bold text-stone-800">
+            Autentikasi Akses Administrator
+          </h4>
+          <p class="text-xs text-stone-500">
+            Dilengkapi proteksi
+            <span class="font-semibold text-rose-600">Anti-Brute Force</span>
+            lockout otomatis. (Default PIN:
+            <code
+              class="bg-stone-100 px-1 py-0.5 rounded font-mono text-stone-800"
+              >bakery123</code
+            >)
+          </p>
+
+          <div
+            id="lockoutAlert"
+            class="hidden p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold"
+          >
+            <i data-lucide="alert-triangle" class="w-4 h-4 inline mr-1"></i>
+            Terlalu banyak percobaan salah! Terkunci selama
+            <span id="lockoutTimer">30</span> detik.
+          </div>
+
+          <form id="adminPinForm" class="space-y-3">
+            <input
+              type="password"
+              id="adminPinInput"
+              placeholder="Masukkan PIN / Password Admin"
+              class="w-full text-center px-4 py-3 rounded-xl border border-stone-300 text-sm font-semibold tracking-wider focus:ring-2 focus:ring-bakery-600 focus:outline-none"
+            />
+            <button
+              type="submit"
+              id="btnAdminLogin"
+              class="w-full py-3 rounded-xl bg-bakery-700 hover:bg-bakery-800 text-white font-bold text-sm transition"
+            >
+              Buka Dashboard Admin
+            </button>
+            <p class="text-[11px] text-stone-400">
+              Sisa batas percobaan:
+              <span id="attemptsLeft" class="font-bold text-stone-600">5</span>
+              kali
+            </p>
+          </form>
+        </div>
+
+        <!-- Admin Main View -->
+        <div
+          id="adminMainView"
+          class="hidden flex-1 overflow-y-auto pt-4 space-y-6"
+        >
+          <div
+            class="flex border-b border-stone-200 gap-4 text-sm font-semibold"
+          >
+            <button
+              id="tabBtnProducts"
+              class="pb-2 border-b-2 border-bakery-700 text-bakery-800"
+            >
+              Daftar Produk & CRUD
+            </button>
+            <button
+              id="tabBtnSettings"
+              class="pb-2 border-b-2 border-transparent text-stone-500 hover:text-stone-800"
+            >
+              Pengaturan WhatsApp & Apps Script
+            </button>
+          </div>
+
+          <div id="tabContentProducts" class="space-y-4">
+            <div class="flex justify-between items-center">
+              <h5 class="text-sm font-bold text-stone-800">
+                Katalog Terdaftar (<span id="adminProductCount">0</span>)
+              </h5>
+              <button
+                id="btnOpenAddProduct"
+                class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-bakery-700 text-white text-xs font-semibold hover:bg-bakery-800 transition"
+              >
+                <i data-lucide="plus" class="w-4 h-4"></i>
+                <span>Tambah Produk Baru</span>
+              </button>
+            </div>
+
+            <div
+              class="overflow-x-auto border border-stone-200 rounded-2xl bg-white"
+            >
+              <table class="w-full text-left text-xs text-stone-600">
+                <thead
+                  class="bg-stone-50 text-stone-700 uppercase font-semibold border-b border-stone-200"
+                >
+                  <tr>
+                    <th class="p-3">Media</th>
+                    <th class="p-3">Nama Produk</th>
+                    <th class="p-3">Kategori</th>
+                    <th class="p-3">Harga</th>
+                    <th class="p-3">Terjual</th>
+                    <th class="p-3 text-right">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody
+                  id="adminProductsTableBody"
+                  class="divide-y divide-stone-100"
+                ></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="tabContentSettings" class="hidden space-y-4">
+            <div
+              class="p-4 bg-stone-50 rounded-2xl border border-stone-200 space-y-4"
+            >
+              <h5
+                class="font-bold text-sm text-stone-800 flex items-center gap-2"
+              >
+                <i data-lucide="phone" class="w-4 h-4 text-emerald-600"></i>
+                <span>Pengaturan Nomor WhatsApp Toko</span>
+              </h5>
+              <div>
+                <label class="block text-xs font-semibold text-stone-600 mb-1"
+                  >Nomor WhatsApp Penerima Pesanan (Format Internasional)</label
+                >
+                <input
+                  type="text"
+                  id="settingWaNumber"
+                  placeholder="Contoh: 6281234567890"
+                  class="w-full max-w-md px-3 py-2 rounded-xl border border-stone-300 text-sm"
+                />
+                <p class="text-[11px] text-stone-400 mt-1">
+                  Gunakan format internasional tanpa simbol '+' atau awalan 0
+                  (misal: 62812xxxxxx).
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="p-4 bg-stone-50 rounded-2xl border border-stone-200 space-y-4"
+            >
+              <h5
+                class="font-bold text-sm text-stone-800 flex items-center gap-2"
+              >
+                <i data-lucide="database" class="w-4 h-4 text-bakery-600"></i>
+                <span
+                  >Sinkronisasi Google Apps Script (Google Sheets
+                  Database)</span
+                >
+              </h5>
+              <div>
+                <label class="block text-xs font-semibold text-stone-600 mb-1"
+                  >Apps Script Web App URL</label
+                >
+                <input
+                  type="url"
+                  id="settingGasUrl"
+                  placeholder="https://script.google.com/macros/s/.../exec"
+                  class="w-full px-3 py-2 rounded-xl border border-stone-300 text-sm"
+                />
+              </div>
+              <div class="flex gap-2">
+                <button
+                  id="btnSaveGasConfig"
+                  class="px-4 py-2 rounded-xl bg-bakery-700 text-white text-xs font-bold hover:bg-bakery-800 transition"
+                >
+                  Simpan Konfigurasi
+                </button>
+                <button
+                  id="btnSyncFromGas"
+                  class="px-4 py-2 rounded-xl bg-white border border-stone-300 text-stone-700 text-xs font-semibold hover:bg-stone-100 transition flex items-center gap-1.5"
+                >
+                  <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+                  <span>Tarik Data Sheet</span>
+                </button>
+              </div>
+              <div
+                id="gasSyncStatus"
+                class="text-xs font-medium text-stone-600"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Form Modal (Add / Edit) -->
+    <div
+      id="productFormModal"
+      class="fixed inset-0 z-50 items-center justify-center bg-black/60 backdrop-blur-sm hidden p-4"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-stone-200 relative max-h-[92vh] overflow-y-auto"
+      >
+        <button
+          id="btnCloseProductForm"
+          class="absolute top-5 right-5 text-stone-400 hover:text-stone-700 transition"
+        >
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+        <h3
+          class="font-serif text-lg font-bold text-stone-900 mb-1"
+          id="productFormTitle"
+        >
+          Tambah Produk Baru
+        </h3>
+        <p class="text-xs text-stone-500 mb-4">
+          Pastikan URL multimedia diawali https:// untuk mematuhi standar
+          keamanan.
+        </p>
+
+        <form id="crudProductForm" class="space-y-3.5">
+          <input type="hidden" id="crudProductId" />
+
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1"
+              >Nama Produk <span class="text-rose-500">*</span></label
+            >
+            <input
+              type="text"
+              id="crudTitle"
+              required
+              placeholder="Contoh: Sourdough Country Loaf"
+              class="w-full px-3 py-2 rounded-xl border border-stone-300 text-sm focus:ring-2 focus:ring-bakery-600 focus:outline-none"
+            />
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1"
+                >Kategori</label
+              >
+              <select
+                id="crudCategory"
+                class="w-full px-3 py-2 rounded-xl border border-stone-300 text-sm bg-white focus:outline-none"
+              >
+                <option value="Sourdough">Sourdough</option>
+                <option value="Viennoiserie">Viennoiserie & Pastry</option>
+                <option value="Patisserie">Cakes & Patisserie</option>
+                <option value="Hampers">Gift & Hampers</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1"
+                >Harga (Rp) <span class="text-rose-500">*</span></label
+              >
+              <input
+                type="number"
+                id="crudPrice"
+                required
+                min="1000"
+                step="500"
+                placeholder="65000"
+                class="w-full px-3 py-2 rounded-xl border border-stone-300 text-sm focus:outline-none"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1"
+              >Keterangan Produk <span class="text-rose-500">*</span></label
+            >
+            <textarea
+              id="crudDescription"
+              required
+              rows="2"
+              placeholder="Jelaskan aroma, tekstur, atau bahan spesial..."
+              class="w-full px-3 py-2 rounded-xl border border-stone-300 text-sm focus:outline-none"
+            ></textarea>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1"
+              >URL Gambar (HTTPS) <span class="text-rose-500">*</span></label
+            >
+            <input
+              type="url"
+              id="crudImage"
+              required
+              placeholder="https://images.unsplash.com/..."
+              class="w-full px-3 py-2 rounded-xl border border-stone-300 text-sm focus:outline-none"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-stone-700 mb-1"
+              >URL Video Preview (Opsional MP4/YouTube)</label
+            >
+            <input
+              type="url"
+              id="crudVideo"
+              placeholder="https://assets.mixkit.co/...mp4"
+              class="w-full px-3 py-2 rounded-xl border border-stone-300 text-sm focus:outline-none"
+            />
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1"
+                >Jumlah Terjual (Sales Count)</label
+              >
+              <input
+                type="number"
+                id="crudSold"
+                min="0"
+                value="0"
+                class="w-full px-3 py-2 rounded-xl border border-stone-300 text-sm focus:outline-none"
+              />
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-stone-700 mb-1"
+                >Status Ketersediaan</label
+              >
+              <select
+                id="crudBadge"
+                class="w-full px-3 py-2 rounded-xl border border-stone-300 text-sm bg-white focus:outline-none"
+              >
+                <option value="Ready Fresh">Ready Fresh</option>
+                <option value="Best Seller">Best Seller</option>
+                <option value="Pre-Order">Pre-Order</option>
+                <option value="Limited Batch">Limited Batch</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="pt-3 flex gap-2">
+            <button
+              type="submit"
+              class="flex-1 py-2.5 rounded-xl bg-bakery-700 hover:bg-bakery-800 text-white font-bold text-sm transition"
+            >
+              Simpan Produk
+            </button>
+            <button
+              type="button"
+              id="btnCancelCrud"
+              class="px-4 py-2.5 rounded-xl border border-stone-300 text-stone-600 text-sm hover:bg-stone-100 transition"
+            >
+              Batal
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div
+      id="confirmModal"
+      class="fixed inset-0 z-50 items-center justify-center bg-black/60 backdrop-blur-sm hidden p-4"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-stone-200 text-center space-y-4"
+      >
+        <div
+          class="w-12 h-12 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center mx-auto"
+        >
+          <i data-lucide="trash-2" class="w-6 h-6"></i>
+        </div>
+        <h4
+          class="font-serif text-lg font-bold text-stone-900"
+          id="confirmModalTitle"
+        >
+          Hapus Produk?
+        </h4>
+        <p class="text-xs text-stone-500" id="confirmModalMessage">
+          Tindakan ini akan menghapus data produk dari katalog.
+        </p>
+        <div class="flex gap-2 pt-2">
+          <button
+            id="btnConfirmYes"
+            class="flex-1 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white text-xs font-bold transition"
+          >
+            Hapus
+          </button>
+          <button
+            id="btnConfirmNo"
+            class="flex-1 py-2.5 rounded-xl border border-stone-300 text-stone-600 text-xs font-semibold hover:bg-stone-100 transition"
+          >
+            Batal
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notification Toast Container -->
+    <div
+      id="toastContainer"
+      class="fixed bottom-5 right-5 z-50 space-y-2 pointer-events-none"
+    ></div>
+
+    <!-- External Custom Vanilla JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
