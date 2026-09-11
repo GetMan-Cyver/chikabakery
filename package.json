@@ -1,10 +1,11 @@
 {
-  "devDependencies": {
-    "@tailwindcss/cli": "^4.3.3",
-    "tailwindcss": "^4.3.3"
-  },
+  "name": "chikabakery",
+  "version": "1.0.0",
   "scripts": {
-    "build": "npx tailwindcss -i ./input.css -o ./style.css --minify",
-    "watch": "npx tailwindcss -i ./input.css -o ./style.css --watch"
+    "build": "npx @tailwindcss/cli -i ./input.css -o ./style.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/cli": "^4.0.0"
   }
 }
